@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$result = mysqli_query($conn, "SELECT * FROM cv_data WHERE id=1");
+$result = mysqli_query($conn, "SELECT * FROM cv_data WHERE id=1"); // Sesuaikan dengan id CV
 $data = mysqli_fetch_array($result);
 ?>
 
@@ -52,9 +52,9 @@ $data = mysqli_fetch_array($result);
     <div class="p-3">
       <div id="comments">
         <?php
-        include 'config.php'; // Sesuaikan dengan nama file koneksi
+        include 'config.php';
 
-        $cvId = 1; // Sesuaikan dengan id CV Anda
+        $cvId = 1; 
         $query = "SELECT * FROM comments WHERE cv_id = $cvId";
         $result = mysqli_query($conn, $query);
 

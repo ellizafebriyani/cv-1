@@ -5,9 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lakukan validasi atau penyimpanan ke database sesuai kebutuhan
     // Misalnya, menyimpan ke database MySQL
 
-    include 'config.php'; // Sesuaikan dengan nama file koneksi
-
-    $cvId = 1; // Sesuaikan dengan id CV Anda
+    include 'config.php'; 
+    
+    $cvId = 1; // Sesuaikan dengan id CV 
     $query = "INSERT INTO comments (cv_id, comment_text) VALUES (?, ?)";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, "is", $cvId, $comment);
