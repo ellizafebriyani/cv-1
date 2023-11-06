@@ -94,7 +94,7 @@ $data = getCVData();
               <label for="keterampilan" class="form-label">Keterampilan</label>
               <textarea class="form-control" id="keterampilan" name="keterampilan" rows="3" placeholder="Keterampilan" required><?php echo $data['pendidikan']; ?></textarea>
               <label for="formFile" class="form-label">Foto Path</label>
-              <input class="form-control" type="file" id="formFile" name="foto_path" value="<?php echo $data['foto_path']; ?>" required>
+              <input class="form-control" type="text" id="formFile" name="foto_path" value="<?php echo $data['foto_path']; ?>" required>
             </div>
             <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
           </form>
