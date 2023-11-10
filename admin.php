@@ -68,8 +68,9 @@ $data = getCVData();
   <!-- <div class="container mt-5"> -->
     <nav class="navbar sticky-top bg-body-tertiary biru">
       <div class="container-fluid">
-        <h1>Update CV</h1>
-        <a class="navbar-brand" href="/cv">View</a>
+        <h3>UPDATE CURRICULUM VITAE</h3>
+        <h1><a class="navbar-brand" href="logout.php"><font color="000000">LOG OUT</h1></a></font>
+        <h1><a class="navbar-brand" href="/cv"><font color="000000">VIEW</h1></a></font>
       </div>
     </nav>
     <div class="card">
@@ -92,7 +93,7 @@ $data = getCVData();
               <label for="pengalamanKerja" class="form-label">Pengalaman Kerja</label>
               <textarea class="form-control" id="pengalamanKerja" name="pengalaman_kerja" rows="3" placeholder="Pengalaman Kerja" required><?php echo $data['pengalaman_kerja']; ?></textarea>
               <label for="keterampilan" class="form-label">Keterampilan</label>
-              <textarea class="form-control" id="keterampilan" name="keterampilan" rows="3" placeholder="Keterampilan" required><?php echo $data['pendidikan']; ?></textarea>
+              <textarea class="form-control" id="keterampilan" name="keterampilan" rows="3" placeholder="Keterampilan" required><?php echo $data['keterampilan']; ?></textarea>
               <label for="formFile" class="form-label">Foto Path</label>
               <input class="form-control" type="text" id="formFile" name="foto_path" value="<?php echo $data['foto_path']; ?>" required>
             </div>

@@ -17,35 +17,51 @@ $data = mysqli_fetch_array($result);
   <title>Curriculum Vitae</title>
 </head>
 
-<body class="p-3">
-  <nav class="navbar sticky-top bg-body-tertiary biru">
+
+<body style="background: #B0C4DE">
+<nav class="navbar sticky-top bg-body-tertiary">
     <div class="container-fluid">
-      <h1>Curriculum Vitae</h1>
-      <a class="navbar-brand" href="admin.php">Update</a>
+    <font color="0000000"><h1>CURRICULUM VITAE</h1></font>
+</div>
+</nav>
+</body>
+
+<body class="p-3">
+<nav class="navbar sticky-top bg-body-tertiary biru">
+    <div class="container-fluid">
+      <h1><a class="navbar-brand" href="#profil"><font color="000000">PROFIL</h1></a></font>
+      <h1><a class="navbar-brand" href="#pendidikan"><font color="000000">PENDIDIKAN</h1></a></font>
+      <h1><a class="navbar-brand" href="#pengalaman"><font color="000000">PENGALAMAN</h1></a></font>
+      <h1><a class="navbar-brand" href="#keterampilan"><font color="000000">KETERAMPILAN</h1></a></font>
+      <h1><a class="navbar-brand" href="login.php"><font color="000000">UPDATE</h1></a></font>
+      <h1><a class="navbar-brand" href="login.php"><font color="000000">LOGIN</h1></a></font>
+      <h1><a class="navbar-brand" href="#comments"><font color="000000">KOMENTAR</h1></a></font>
+      <h1><a class="navbar-brand" href="home.php"><font color="000000">HOMEPAGE</h1></a></font>
     </div>
   </nav>
   <div class="card">
     <div class="p-3">
       <img src="<?php echo $data['foto_path']; ?>" alt="Foto Profil">
       <div class="card-body">
-        <h1 class="card-title"><?php echo $data['nama']; ?></h1>
-        <p class="card-text"><?php echo $data['alamat']; ?></p>
-        <p class="card-text"><?php echo $data['telepon']; ?></p>
-        <p class="card-text"><?php echo $data['email']; ?></p>
-        <p class="card-text"><?php echo $data['web']; ?></p>
-        <h2>Pendidikan</h2>
-        <p class="card-text"><?php echo $data['pendidikan']; ?></p>
-        <h2>Pengalaman Kerja</h2>
-        <p class="card-text"><?php echo $data['pengalaman_kerja']; ?></p>
-        <h2>Keterampilan</h2>
-        <p class="card-text"><?php echo $data['keterampilan']; ?></p>
+      <h2>PROFIL</h2>
+        <h1 class="card-title"><?php echo $data['nama']; ?></h1><p id="profil"></p><a href=""></a>
+        <p class="card-text"><?php echo $data['alamat']; ?></p><p id="profil"></p><a href=""></a>
+        <p class="card-text"><?php echo $data['telepon']; ?></p><p id="profil"></p><a href=""></a>
+        <p class="card-text"><?php echo $data['email']; ?></p><p id="profil"></p><a href=""></a>
+        <p class="card-text"><?php echo $data['web']; ?></p><p id="profil"></p><a href=""></a>
+        <h3>PENDIDIKAN</h3>
+        <p class="card-text"><?php echo $data['pendidikan']; ?></p><p id="pendidikan"></p><a href=""></a>
+        <h3>PENGALAMAN KERJA</h3>
+        <p class="card-text"><?php echo $data['pengalaman_kerja']; ?></p><p id="pengalaman"></p><a href=""></a>
+        <h3>KETERAMPILAN</h3>
+        <p class="card-text"><?php echo $data['keterampilan']; ?></p><p id="keterampilan"></p><a href=""></a>
       </div>
     </div>
   </div>
   <!-- Tampilkan komentar -->
   <nav class="navbar sticky-top bg-body-tertiary biru">
     <div class="container-fluid">
-      <h1>Komentar</h1>
+      <h3>KOMENTAR</h3>
     </div>
   </nav>
   <div class="card">
@@ -63,13 +79,13 @@ $data = mysqli_fetch_array($result);
             echo '<div class="comment">' . $comment['comment_text'] . '</div>';
           }
         } else {
-          echo 'Belum ada komentar.';
+          echo 'Belum ada komentar';
         }
 
         mysqli_close($conn);
         ?>
       </div>
-      <label for="commentInput" class="form-label">Tambahkan Komentar</label>
+      <br><label for="commentInput" class="form-label">TAMBAHKAN KOMENTAR DI BAWAH!</label></br>
       <textarea class="form-control" id="commentInput" name="comment" rows="3" placeholder="Tambahkan komentar..."></textarea>
       <button class="btn btn-primary" onclick="addComment()">Tambah Komentar</button>
     </div>
